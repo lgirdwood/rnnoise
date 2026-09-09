@@ -37,6 +37,19 @@
 #include "opus_types.h"
 #include "common.h"
 
+#if defined(__ZEPHYR__)
+double sin(double x);
+double cos(double x);
+double floor(double x);
+double log10(double x);
+double fabs(double x);
+float fabsf(float x);
+float sinf(float x);
+float cosf(float x);
+float floorf(float x);
+float log10f(float x);
+#endif
+
 # if !defined(__GNUC_PREREQ)
 #  if defined(__GNUC__)&&defined(__GNUC_MINOR__)
 #   define __GNUC_PREREQ(_maj,_min) \
